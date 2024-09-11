@@ -1,0 +1,27 @@
+>> Installation Cmds of Java 
+
+- To install the Jenkins before we need to install the Java because it depend on each other. 
+- sudo apt-get update 
+- sudo apt install openjdk-21-jre-headless (install the java version of 21)
+- sudo apt-get update
+
+
+>> Installation Cmds of Jenkins 
+- Before firing below commands in the server first add the Port.no 8080 for Jenkins to access its User Interface.
+- sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \    https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+- echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \  /etc/apt/sources.list.d/jenkins.list > /dev/null
+- sudo apt-get update 
+- sudo apt-get install jenkins 
+- sudo systemctl start jenkins 
+- sudo systemctl status jenkins 
+- Browser > Paste Server IP (0.0.0.0:8080) for access the Jenkins.
+- But for sign in it will required password which we can get from the below commands. 
+- sudo cat /var/lib/jenkins/secrets/initialAdminPassword 
+- It will show the password copy and paste it in the browser
+- After successful Login in the Administration we have to create an First Admin User
+	>> UserName : Gaurav
+	     Password : Pass@123
+	     FullName : Gaurav Patkari
+	     Email ID   : gauravpatkari1330@gmail.com
+- After inserting all the details we get the Access URL of Jenkins Dashboard 
+
