@@ -7,14 +7,16 @@
 
 
 >> Installation Cmds of Jenkins 
-- Before firing below commands in the server first add the Port.no 8080 for Jenkins to access its User Interface.
-- sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \    https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
-- echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \  /etc/apt/sources.list.d/jenkins.list > /dev/null
+- Before firing below commands in the server first add the Port.no 8080 for Jenkins to access its Dashboard.
+- sudo wget -O /usr/share/keyrings/jenkins-keyring.asc \    
+  https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key
+- echo "deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc]" \  
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \  /etc/apt/sources.list.d/jenkins.list > /dev/null
 - sudo apt-get update 
 - sudo apt-get install jenkins 
 - sudo systemctl start jenkins 
 - sudo systemctl status jenkins 
-- Browser > Paste Server IP (0.0.0.0:8080) for access the Jenkins.
+- Browser > Paste EC2 Server IP (0.0.0.0:8080) for access Jenkins Dashboard.
 - But for sign in it will required password which we can get from the below commands. 
 - sudo cat /var/lib/jenkins/secrets/initialAdminPassword 
 - It will show the password copy and paste it in the browser
