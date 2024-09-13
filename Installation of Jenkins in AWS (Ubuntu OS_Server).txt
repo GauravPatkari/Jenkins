@@ -1,6 +1,6 @@
 >> Installation Cmds of Java 
 
-- To install the Jenkins before we need to install the Java because it depend on each other. 
+- To install Jenkins before we need to install Java because it depend on each other. 
 - sudo apt-get update 
 - sudo apt install openjdk-21-jre-headless (install the java version of 21)
 - sudo apt-get update
@@ -17,13 +17,13 @@
 - sudo systemctl start jenkins 
 - sudo systemctl status jenkins 
 - Browser > Paste EC2 Server IP (0.0.0.0:8080) for access Jenkins Dashboard.
-- But for sign in it will required password which we can get from the below commands. 
+- But for sign-in, it will require a password which we can get from the below commands. 
 - sudo cat /var/lib/jenkins/secrets/initialAdminPassword 
-- It will show the password copy and paste it in the browser
-- After successful Login in the Administration we have to create an First Admin User
-	>> UserName : Gaurav
+- It will show the password copy and paste it into the browser
+- After successful Login in the Administration we have to create a First Admin User
+	>>   UserName : Gaurav
 	     Password : Pass@123
 	     FullName : Gaurav Patkari
-	     Email ID   : gauravpatkari1330@gmail.com
+	     Email ID : gauravpatkari1330@gmail.com
 - After inserting all the details we get the Access URL of Jenkins Dashboard 
 
